@@ -1,24 +1,59 @@
-# README
+# Rails Simple Api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Apenas uma api simples com Rails.
 
-Things you may want to cover:
+ #### Comandos básicos:
 
-* Ruby version
+Criando uma nova aplicação(API):
 
-* System dependencies
+    rails new nome_aplicação --api
 
-* Configuration
+Criando controller: 
 
-* Database creation
+    rails g controller nome_controller
 
-* Database initialization
+Criando model:
 
-* How to run the test suite
+    rails g model Nome_modelo
 
-* Services (job queues, cache servers, search engines, etc.)
+Também é possível definir os campos ao serem criados naquele modelo:
 
-* Deployment instructions
+    rails g model Nome_modelo titulo:string conteudo:text
 
-* ...
+Criando uma nova base de dados(conforme descrito no /config/database.yml):
+
+    rails db:create
+
+Migrando a base de dados:
+
+    rails db:migrate
+
+Inserindo dados na base(comandos no db/seeds.rb):
+
+    rails db:seed
+
+Iniciando a aplicação:
+
+    rails s
+    
+#### Obs: Ao clonar essa aplicação você deve executar os seguintes comandos:
+
+Instalar dependências:
+    
+    bundle install
+    
+Iniciar o banco de dados:
+
+    rails db:create db:migrate db:seed
+
+Iniciar o servidor da aplicação:
+ 
+    rails s
+
+
+
+
+
+
+
+
