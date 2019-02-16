@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  # protect_from_forgery with: :exception
+
   def index
     articles = Article.order('created_at DESC')
     render json: { status: 'SUCCESS', message: 'Artigos carregados', data: articles }, status: :ok
